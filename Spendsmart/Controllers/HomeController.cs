@@ -26,6 +26,9 @@ namespace Spendsmart.Controllers
         public IActionResult Expenses()
         {
             var allExpenses = _expensesDBContext.Expenses.ToList();
+            var totalExpenses = allExpenses.Sum(x => x.Value);
+
+            ViewBag.Expenses = totalExpenses;
             return View(allExpenses);
         }
         public IActionResult Create_Edit(int? id)

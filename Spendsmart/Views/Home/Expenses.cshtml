@@ -52,8 +52,10 @@
                             <a asp-action="DeleteExpense" asp-route-id="@expense.Id">Delete</a>
                         </td>
                     </tr>
+                    
                 }
             }
+            <h2>Total Expenses : @ViewBag.Expenses</h2>
     </tbody>
 </table>
 </div>
